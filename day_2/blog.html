@@ -9,7 +9,7 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    background-color: #f5f7fa;
+    background-color: #ea5616;
 }
 
 .container {
@@ -30,7 +30,10 @@ body {
     width: 150px;
     height: 150px;
     border-radius: 50%;
+    border: 4px solid #2193b0;
 }
+
+
 
 .nav {
     text-align: center;
@@ -44,17 +47,24 @@ body {
     font-weight: bold;
 }
 
-/* Blog Section */
+
 .blog-post {
     margin-top: 20px;
     border-bottom: 1px solid #ddd;
     padding-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .blog-post img {
     width: 100%;
     height: auto;
     margin-top: 10px;
+    
+}
+
+.blog-post img:hover {
+    transform: scale(1.05);
 }
 
 .read-more {
@@ -86,6 +96,19 @@ a:active {
   text-decoration: underline;
 }
 
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 </style>
 </head>
 
@@ -113,8 +136,34 @@ a:active {
         <a href="https://roadmap.sh/frontend/projects">Projects</a>
         <a href="#">Contact</a>
     </div>
+    
+        <h2>Recent Blog Posts</h2>
 
-    <div class="blog-post">
+    <table style="width:100%">
+        <tr>
+            <th>Post Title</th>
+            <th>LINK</th>
+            <th>Category</th>
+        </tr>
+        <tr>
+            <td>Learning HTML Basics</td>
+            <td><a class="read-more" href="#html">Visit html section</a></td>
+            <td>HTML</td>
+        </tr>
+        <tr>
+            <td>Introduction to CSS</td>
+            <td><a class="read-more" href="#css">Visit css section</a></td>
+            <td>CSS</td>
+        </tr>
+        <tr>
+            <td>Why Learn JavaScript</td>
+            <td><a class="read-more" href="#js">Visit js section</a></td>
+            <td>JavaScript</td>
+        </tr>
+    </table>
+    
+
+    <div class="blog-post" id="html">
         <h2>Learning HTML Basics</h2>
         <p style="background-color:Tomato;">HTML is the foundation of web development. It helps structure content on the web.</p>
         <img src="https://media.wired.com/photos/5955d6ed63d43b038e9bcad0/master/w_580,h_392,c_limit/html5.jpg" alt="HTML Image">
@@ -125,7 +174,7 @@ a:active {
         <p><a class="read-more" href="https://www.w3schools.com/html/">Read More</a></p>
     </div>
 
-    <div class="blog-post">
+    <div class="blog-post" id="css">
         <h2>Introduction to CSS</h2>
         <p style="background-color:violet;">CSS is used to style web pages and make them visually appealing.</p>
         <img src="https://images.unsplash.com/photo-1505685296765-3a2736de412f" alt="CSS Image">
@@ -133,7 +182,7 @@ a:active {
         <p><a class="read-more" href="https://developer.mozilla.org/en-US/docs/Web/CSS">Read More</a></p>
     </div>
 
-    <div class="blog-post">
+    <div class="blog-post" id="js">
         <h2>Why Learn JavaScript?</h2>
         <p style="background-color:yellowgreen;""> JavaScript makes websites interactive and dynamic.</p>
         <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" alt="JS Image">
