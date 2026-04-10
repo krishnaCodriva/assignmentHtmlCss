@@ -6,19 +6,26 @@
 <title>Registration Form</title>
 
 <style>
+
+
 body {
     font-family: Arial, sans-serif;
-    background-color: hsl(120, 15%, 94%);
+    background-image: url("https://www.shutterstock.com/image-vector/data-center-worker-600w-1320077870.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
     display: flex;
-    justify-content: center;
+    justify-content: flex-start; 
     align-items: center;
     height: 100vh;
 }
+
 .container {
-    background-color: rgb(208, 236, 27);
+    background-color: rgb(240, 240, 236);
     padding: 25px;
-    border-radius: 10px;
-    width: 400px;
+    border-radius: 20px;
+    width: 800px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 h2 {
@@ -35,6 +42,15 @@ input, select, textarea {
     margin-top: 5px;
     border-radius: 5px;
     border: 1px solid #ccc;
+}
+.hint {
+    display: none;
+    color: #555;
+    font-size: 12px;
+}
+
+input:focus + .hint {
+    display: block;
 }
 .radio-group, .checkbox-group {
     margin-top: 5px;
@@ -68,12 +84,14 @@ button:hover {
 
 <label for="name">Full Name</label>
 <input type="text" id="name" required pattern="[A-Za-z ]{3,}" placeholder="Enter full name">
+<small class="hint">Only letters, minimum 3 characters</small>
 
 <label for="email">Email</label>
 <input type="email" id="email" required placeholder="Enter email">
 
 <label for="phone">Phone Number</label>
 <input type="tel" id="phone" required pattern="[0-9]{10}" placeholder="10 digit number">
+<small class="hint">Enter 10 digit number</small>
 
 <label for="password">Password</label>
 <input type="password" id="password" required minlength="6">
@@ -114,6 +132,7 @@ button:hover {
 </form>
 
 </div>
+<!-- change -->
 
 </body>
 </html>
