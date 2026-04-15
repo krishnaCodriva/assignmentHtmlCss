@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Variables Layout</title>
+
+<style>
+
+/* CSS VARIABLES */
+:root{
+  --header-bg: #111827;
+  --card-bg: #f3f4f6;
+  --badge-bg: red;
+  --scroll-bg: lightblue;
+  --hidden-bg: khaki;
+  --horizontal-bg: lightgreen;
+  --box-bg: #3b82f6;
+  --text-light: white;
+}
+
+/* RESET */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+/* HEADER */
+.header{
+position:fixed;
+top:0;
+width:100%;
+height:70px;
+background:var(--header-bg);
+color:var(--text-light);
+display:flex;
+align-items:center;
+padding-left:20px;
+z-index:1000;
+}
+
+/* CONTENT */
+.content{
+margin-top:80px;
+padding:20px;
+}
+
+/* CARD */
+.card{
+background:var(--card-bg);
+padding:20px;
+margin-bottom:40px;
+border-radius:10px;
+position:relative;
+}
+
+/* BADGE */
+.badge{
+position:absolute;
+top:-10px;
+right:-10px;
+background:var(--badge-bg);
+color:var(--text-light);
+padding:5px 10px;
+border-radius:20px;
+}
+
+/* DISPLAY */
+.block{
+display:block;
+background:var(--scroll-bg);
+margin:5px 0;
+padding:10px;
+}
+
+.inline{
+display:inline;
+background:lightcoral;
+padding:5px;
+}
+
+.inline-block{
+display:inline-block;
+width:100px;
+height:100px;
+background:var(--box-bg);
+margin-right:10px;
+color:var(--text-light);
+text-align:center;
+line-height:100px;
+}
+
+/* POSITION + Z INDEX */
+.overlap-container{
+position:relative;
+height:150px;
+}
+
+.box1{
+position:absolute;
+width:150px;
+height:150px;
+background:orange;
+z-index:1;
+}
+
+.box2{
+position:absolute;
+width:150px;
+height:150px;
+background:purple;
+left:80px;
+top:30px;
+z-index:2;
+}
+
+/* OVERFLOW */
+.scroll-box{
+height:120px;
+overflow:scroll;
+background:var(--scroll-bg);
+padding:10px;
+}
+
+.hidden-box{
+height:120px;
+overflow:hidden;
+background:var(--hidden-bg);
+padding:10px;
+}
+
+.horizontal{
+overflow-x:scroll;
+white-space:nowrap;
+background:var(--horizontal-bg);
+padding:10px;
+}
+
+.h-box{
+display:inline-block;
+width:150px;
+height:100px;
+background:var(--box-bg);
+margin-right:10px;
+color:var(--text-light);
+text-align:center;
+line-height:100px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="header">
+CSS Variables Layout Assignment
+</div>
+
+<div class="content">
+
+<div class="card">
+<div class="badge">display</div>
+<h2>Display Example</h2>
+
+<div class="block">Block Element</div>
+<div class="block">Block Element</div>
+
+<span class="inline">Inline 1</span>
+<span class="inline">Inline 2</span>
+
+<br><br>
+
+<div class="inline-block">1</div>
+<div class="inline-block">2</div>
+<div class="inline-block">3</div>
+
+</div>
+
+<div class="card">
+<h2>Position + z-index</h2>
+<div class="overlap-container">
+<div class="box1"></div>
+<div class="box2"></div>
+</div>
+</div>
+
+<div class="card">
+<h2>Overflow Scroll</h2>
+<div class="scroll-box">
+<p>Line 1</p>
+<p>Line 2</p>
+<p>Line 3</p>
+<p>Line 4</p>
+<p>Line 5</p>
+<p>Line 6</p>
+<p>Line 7</p>
+</div>
+</div>
+
+<div class="card">
+<h2>Overflow Hidden</h2>
+<div class="hidden-box">
+<p>Hidden 1</p>
+<p>Hidden 2</p>
+<p>Hidden 3</p>
+<p>Hidden 4</p>
+<p>Hidden 5</p>
+</div>
+</div>
+
+<div class="card">
+<h2>Horizontal Scroll</h2>
+<div class="horizontal">
+<div class="h-box">1</div>
+<div class="h-box">2</div>
+<div class="h-box">3</div>
+<div class="h-box">4</div>
+<div class="h-box">5</div>
+<div class="h-box">6</div>
+</div>
+</div>
+
+</div>
+
+</body>
+</html>
