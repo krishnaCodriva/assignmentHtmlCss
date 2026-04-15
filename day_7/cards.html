@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Game Explorer</title>
+
+<style>
+
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+}
+
+
+body{
+background:#f3f4f6;
+}
+
+
+.header{
+position:fixed;
+top:0;
+width:100%;
+height:70px;
+background:#111827;
+color:white;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:22px;
+z-index:1000;
+}
+
+
+.footer{
+position:fixed;
+bottom:0;
+width:100%;
+height:60px;
+background:#111827;
+color:white;
+display:flex;
+align-items:center;
+justify-content:center;
+z-index:1000;
+}
+
+
+.main{
+padding-top:90px;
+padding-bottom:80px;
+padding-left:20px;
+padding-right:20px;
+}
+
+
+.intro{
+text-align:center;
+margin-bottom:30px;
+}
+
+.intro h1{
+margin-bottom:10px;
+}
+
+.intro p{
+color:#555;
+}
+
+
+.card-container{
+display:flex;
+flex-wrap:wrap;
+gap:20px;
+justify-content:center;
+}
+
+
+.card{
+background:white;
+width:280px;
+border-radius:12px;
+overflow:hidden;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+display:flex;
+flex-direction:column;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-6px);
+box-shadow:0 10px 20px rgba(0,0,0,0.15);
+}
+
+
+.card img{
+width:100%;
+height:180px;
+object-fit:cover;
+}
+
+
+.card-content{
+padding:20px;
+flex:1;
+display:flex;
+flex-direction:column;
+}
+
+.card-content h3{
+margin-bottom:10px;
+}
+
+.card-content p{
+flex:1;
+color:#555;
+margin-bottom:15px;
+}
+
+.card-content button{
+padding:10px;
+border:none;
+background:#3b82f6;
+color:white;
+border-radius:6px;
+cursor:pointer;
+}
+
+.card-content button:hover{
+background:#2563eb;
+}
+
+/* RESPONSIVE */
+@media (max-width:768px){
+.card{
+width:100%;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="header">
+🎮 Game Explorer
+</div>
+
+<div class="main">
+
+<section class="intro">
+<h1>Explore Popular Game Genres</h1>
+<p>Discover exciting games across different categories and start playing today.</p>
+</section>
+
+<div class="card-container">
+
+<div class="card">
+<img src="https://i0.wp.com/thetechhacker.com/wp-content/uploads/2017/06/Best-Action-Games-for-PC.jpg?w=1366&ssl=1">
+<div class="card-content">
+<h3>⚔️ Action Games</h3>
+<p>Fast-paced gameplay with combat, missions and thrilling challenges.</p>
+<button>Explore</button>
+</div>
+</div>
+
+<div class="card">
+<img src="https://i.ytimg.com/vi/U7BheAHTpMY/maxresdefault.jpg">
+<div class="card-content">
+<h3>🏎️ Racing Games</h3>
+<p>Experience high-speed racing with realistic tracks and vehicles.</p>
+<button>Play Now</button>
+</div>
+</div>
+
+<div class="card">
+<img src="https://c8.alamy.com/comp/PYFH4C/jigsaw-puzzle-game-with-kids-in-park-illustration-PYFH4C.jpg">
+<div class="card-content">
+<h3>🧠 Puzzle Games</h3>
+<p>Improve problem-solving skills with fun and challenging puzzles.</p>
+<button>Try</button>
+</div>
+</div>
+
+<div class="card">
+<img src="https://t4.ftcdn.net/jpg/18/46/01/81/240_F_1846018145_DDQpA8h3HUUozXBhzSApoddHxzsyc9II.jpg">
+<div class="card-content">
+<h3>🎯 Shooting Games</h3>
+<p>Test your accuracy and reflexes in intense shooting battles.</p>
+<button>Start</button>
+</div>
+</div>
+
+<div class="card">
+<img src="https://www.gamespot.com/a/uploads/original/1552/15524586/3774273-astros_playroom_screenshot_06.jpg">
+<div class="card-content">
+<h3>🌍 Adventure Games</h3>
+<p>Explore open worlds and complete exciting missions.</p>
+<button>Discover</button>
+</div>
+</div>
+
+<div class="card">
+<img src="https://img.freepik.com/free-photo/sports-tools_53876-138077.jpg?semt=ais_hybrid&w=740&q=80">
+<div class="card-content">
+<h3>⚽ Sports Games</h3>
+<p>Play football, cricket and more competitive sports.</p>
+<button>Play</button>
+</div>
+</div>
+
+<div class="card">
+<img src="https://media.istockphoto.com/id/1201193769/photo/international-team-of-coworkers-putting-colorful-puzzles-together.jpg?s=612x612&w=0&k=20&c=cOuN7CsMDSrTl8aKJ5yjx4-XciB01OfoUssy30VjgOg=">
+<div class="card-content">
+<h3>🏰 Strategy Games</h3>
+<p>Plan, build and dominate using strategic thinking.</p>
+<button>Learn More</button>
+</div>
+</div>
+
+<div class="card">
+<img src="https://d32dbz94xv1iru.cloudfront.net/images/events/by_uuid/3f/3f38b974-43c0-49c3-84ed-2d1f3d2058cf-1500x900.webp">
+<div class="card-content">
+<h3>👾 Arcade Games</h3>
+<p>Classic arcade fun with simple but addictive gameplay.</p>
+<button>Play Now</button>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="footer">
+© 2026 Game Explorer | Flexbox Assignment
+</div>
+
+</body>
+</html>
